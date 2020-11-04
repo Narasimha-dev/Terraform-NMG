@@ -23,5 +23,5 @@ this file is Nginx configuration file which map the domain to node instance runn
 
 domain allocation :- 
 - From route 53 , created record on test1.me.uk
-- test1.test1.me.uk and test2.test1.me.uk is being routed to instance , which is created using terraform script.
+- http://test1.test1.me.uk/ and http://test2.test1.me.uk/ is being routed to instance , which is created using terraform script.
 - routing server name to instance port via nginx .
