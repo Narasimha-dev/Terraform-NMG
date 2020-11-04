@@ -1,20 +1,12 @@
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server ;
-
-server_name test1.test1.me.uk;
-    location / {
-        proxy_pass http://127.0.0.1:3001;
-        }
+  server_name test1.test1.me.uk;
+  location ~ {
+    proxy_pass http://localhost:3001;
+  }
 }
-
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server ;
-
-server_name test2.test1.me.uk;
-
-    location / {
-        proxy_pass http://127.0.0.1:3002;
-        }
+  server_name test2.test1.me.uk;
+  location ~ {
+    proxy_pass http://localhost:3002;
+  }
 }
